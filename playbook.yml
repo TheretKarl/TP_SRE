@@ -1,20 +1,17 @@
 ---
-- name: Installation complete
-  hosts: all
+- hosts: all
   become: true
-  vars:
-    users: [client1, client2, client3]
+  #vars:
+    #users: [client1, client2, client3]
   tasks:
-    - name: "Add user"
-      user:
-        name: "{{ item }}"
+  - name: "Add User"
+    user:
+      name: client1
+      password: client1
+      state: present
       file:
-        path: /home/"{{ item }}"/public_html
+        path: "/home/client1/public_html"
         state: directory
-      with_items: "{{ users }}"
-    #remote_user: root
-    #vars:
-    #  user: itesciadmin
-    roles:
-    - geerlingguy.apache
-
+  roles:
+    - makarenalabs.wordpress
+...
