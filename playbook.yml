@@ -1,0 +1,9 @@
+---
+  -name: Installation d'apache2
+  hosts: all
+  remote_user: root
+  vars:
+    user: itesciadmin
+  roles:
+    - geerlingguy.apache
+
