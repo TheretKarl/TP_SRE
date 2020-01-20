@@ -1,9 +1,20 @@
 ---
-  -name: Installation d'apache2
+- name: Installation complete
   hosts: all
-  remote_user: root
+  become: true
   vars:
-    user: itesciadmin
-  roles:
+    users: [client1, client2, client3]
+  tasks:
+    - name: "Add user"
+      user:
+        name: "{{ item }}"
+      file:
+        path: /home/"{{ item }}"/public_html
+        state: directory
+      with_items: "{{ users }}"
+    #remote_user: root
+    #vars:
+    #  user: itesciadmin
+    roles:
     - geerlingguy.apache
 
