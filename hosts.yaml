@@ -1,0 +1,9 @@
+---
+  all:
+    hosts:
+      10.0.10.10:
+      10.0.10.20:
+    vars:
+      ansible_ssh_user: itesciadmin
+      ansible_ssh_pass: itescia
+
