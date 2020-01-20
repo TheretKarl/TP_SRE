@@ -23,4 +23,5 @@ Statut du projet:
 Note d'installation:
 	Afin de pouvoir faire fonctionner le projet, il faut installer avec la commande suivante un ansible-galaxy:
 		ansible-galaxy install makarenalabs.wordpress
+	Pour ajouter des nouveaux utilisateurs, il faut ajouter un nom dans la liste du playbook.yml (var users)
  
