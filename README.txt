@@ -18,4 +18,9 @@ Hosts:
 Statut du projet:
 	Toutes les machines sont en capacité de se joindre les unes les autres.
 	mysqlmaster réplique bien correctement sur mysqlslave.
-	Les clées ssh ont été bien échangées, aussi bien en itesciadmin ou root, mais que les configurations ne sont que en root. 
+	Les clées ssh ont été bien échangées, aussi bien en itesciadmin ou root, mais que les configurations ne sont que en root.
+
+Note d'installation:
+	Afin de pouvoir faire fonctionner le projet, il faut installer avec la commande suivante un ansible-galaxy:
+		ansible-galaxy install makarenalabs.wordpress
+ 
